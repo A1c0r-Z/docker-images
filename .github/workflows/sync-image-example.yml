@@ -21,12 +21,12 @@ jobs:
       uses: docker/login-action@v2.2.0
       with:
         registry: crpi-cci2j0bag7rztjzw.cn-guangzhou.personal.cr.aliyuncs.com
-        username: ${{secrets.DOCKER_USERNAME}}
-        password: ${{secrets.DOCKER_PASSWORD}}
+        username: A1c0r
+        password: einsam2106
         logout: false
 
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://docker.io/userxy2015/ngnix:latest docker://crpi-cci2j0bag7rztjzw.cn-guangzhou.personal.cr.aliyuncs.com/alcor_zhao/ngnix:latest
+         skopeo copy docker://docker.io/mysql:5.7.44-oraclelinux7 docker://crpi-cci2j0bag7rztjzw.cn-guangzhou.personal.cr.aliyuncs.com/alcor_zhao/mysql:5.7
          
          
